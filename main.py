@@ -27,8 +27,8 @@ def user_info():
     for text in username:
         if text == ' ':
             username_error = "That's not a valid username"
-    if username>=20 or username<=3:
-        username_error
+    if len(username)>=20 or len(username)<=3:
+        username_error = "That's not a valid username"
     if username == '':
         username_error = "You need to put something here, donchaknow"
     
@@ -45,7 +45,7 @@ def user_info():
         verify = ''
     
     if email != '':
-        if email>=20 or email<=3:
+        if len(email)>=20 or len(email)<=3:
             email_error = "That's not a valid email"
         for text in email:
             if text == '@':
